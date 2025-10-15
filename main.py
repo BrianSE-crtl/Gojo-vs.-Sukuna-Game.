@@ -1,12 +1,13 @@
 import os 
 import time
 import random
+import climage
 
-
+os.system('cls')
 
 def battle(): 
     gojo_hp = 150 
-    sukuna_hp = 200 
+    sukuna_hp = 150 
 
     # loop to make sure the game continues as long as both are alive
     while gojo_hp > 0 and sukuna_hp > 0: 
@@ -17,7 +18,7 @@ def battle():
         print("1. Cursed Technique Red")
         print("2. Cursed Technique Blue (80% to hit)")
         print("3. Hollow Purple (30% to hit)")
-        print("4. Reverse Cursed technique (heals you)")
+        print("4. Reverse Cursed Technique (heals you)")
 
         choice = input("> ").title()
 
@@ -83,6 +84,7 @@ def battle():
         print("Both fighters fall... It's a draw!")
     elif sukuna_hp <= 0:
         print("Gojo wins! Sukuna has been defeated!")
+        # climage.convert('', is_unicode=True)
     else: 
         print("Sukuna wins! Gojo has fallen...")
     print("=============================")
