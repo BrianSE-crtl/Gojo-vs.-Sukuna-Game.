@@ -196,15 +196,19 @@ def battle():
                 print(f"Malevolent Shrine deals {damage} damage to Gojo! ({sukuna_domain_active} turns left)")
 
     # End of battle
-    print("\n=============================")
+    print("\n===================================")
     if gojo_hp <= 0 and sukuna_hp <= 0:
         print("Both fighters fall... It's a draw!")
     elif sukuna_hp <= 0:
         print("Gojo wins! Sukuna has been defeated!")
-        # climage.convert('', is_unicode=True)
+    elif gojo_sanity <= 0:
+        print("Gojo's mind collapses under his own power... He loses control!")
+    elif sukuna_sanity <= 0:
+        print("Sukuna runs out of cursed energy and collapses!")
+        print("The Disgraced One has fallen...")
     else: 
         print("Sukuna wins! Gojo has fallen...")
-    print("=============================")
+    print("===================================")
 
 if __name__ == '__main__':
     battle()
