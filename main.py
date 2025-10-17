@@ -1,7 +1,6 @@
 import os 
 import time
 import random
-import climage
 
 os.system('cls')
 
@@ -54,6 +53,7 @@ def battle():
                 else: 
                     damage = random.randint(10, 20)
                     sukuna_hp -= damage 
+                    gojo_sanity -= 10 
                     print("A wave of destructive energy blasts through the skies!")
                     print(f"Red hits Sukuna for {damage} damage!")
             else: 
@@ -73,6 +73,7 @@ def battle():
                 elif random.random() < 0.8:
                     damage == random.randint(20, 35)
                     sukuna_hp -= damage 
+                    gojo_sanity -= 15
                     print(f"Blue blasts Sukuna for {damage} damage!")
                 else: 
                     print("Blue spins out of control and explodes far away!")
@@ -95,6 +96,7 @@ def battle():
                     random.random() < 0.3
                     damage = random.randint(40, 55)
                     sukuna_hp -= damage 
+                    gojo_sanity -= 30
                     print(f"Hollow Purple tears through Sukuna for {damage} damage! That's gotta hurt...")
             else: 
                 print("\nGojo doesn't have enough sanity to use Hollow")
